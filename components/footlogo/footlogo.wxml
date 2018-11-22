@@ -1,0 +1,5 @@
+<template name="footlogo">
+  <view class="tem-foot-logo-wrap">
+    <image class="img" src="{{isNet?url:'../../images/logo_icon.png'}}" mode="aspectFit" />
+  </view>
+</template>

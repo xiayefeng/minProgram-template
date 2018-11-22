@@ -1,0 +1,74 @@
+@import '../../style/common';
+
+@font-face {font-family: "iconfont";
+  src:url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAScAAsAAAAABwQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFY8fUf5Y21hcAAAAYAAAABLAAABcOcvtb9nbHlmAAABzAAAAO8AAAEMXLxhtWhlYWQAAAK8AAAALAAAADYTT3BoaGhlYQAAAugAAAAcAAAAJAfeA4NobXR4AAADBAAAAAgAAAAICAAAAGxvY2EAAAMMAAAABgAAAAYAhgAAbWF4cAAAAxQAAAAgAAAAIAERAGVuYW1lAAADNAAAAUUAAAJtPlT+fXBvc3QAAAR8AAAAIAAAADHg5Mt3eJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2BkYWCcwMDKwMHUyXSGgYGhH0IzvmYwYuRgYGBiYGVmwAoC0lxTGByesT9jZ27438AQw9zA0AAUZgTJAQDePQvxeJxjYGBgZWBgYAZiHSBmYWBgDGFgZAABP6AoI1icmYELLM7CoARWwwISf8b+/z+MBPJZwCQDIxvDKOABkzJQHjisIJiBEQA6CAmFAHicLY07TsNAEIbn34AtWcgPdu2wSKywAadI4iIxa1kId0iORIOcgnTu9zocgEPQpKPiHJSUXCAWa2CKbx6a+YaOycbkfTKjEzqja3qiZyKsV/co58guIBLeoCow8+EqcIWpLWzb4CbNnFgk03SVxJFwrtIsv41KfYcGZT5H7riR3U7tdVTA9RGvC+B8z/leeN+dYcx0f9QbYKNHPuBlePXC0EPPpeSHx5H9OOgXNVAv2Ntv3gnZQ7FPfsm59MLDh7VsDWC2nbHv20q3jLW6ar9OfS+AFAONJkZCIhDBUbUc6F9Iy3oHJYQi+gGgESoRAHicY2BkYGAA4uLyjvPx/DZfGbhZGEDghsQ0JWSahYFZHUhxMDCBeAD8RAd6eJxjYGRgYG7438AQw8IAAkCSkQEVMAEARwgCawQAAAAEAAAAAAAAAACGAAAAAQAAAAIAWQAFAAAAAAACAAAACgAKAAAA/wAAAAAAAHicZY9NTsMwEIVf+gekEqqoYIfkBWIBKP0Rq25YVGr3XXTfpk6bKokjx63UA3AejsAJOALcgDvwSCebNpbH37x5Y08A3OAHHo7fLfeRPVwyO3INF7gXrlN/EG6QX4SbaONVuEX9TdjHM6bCbXRheYPXuGL2hHdhDx18CNdwjU/hOvUv4Qb5W7iJO/wKt9Dx6sI+5l5XuI1HL/bHVi+cXqnlQcWhySKTOb+CmV7vkoWt0uqca1vEJlODoF9JU51pW91T7NdD5yIVWZOqCas6SYzKrdnq0AUb5/JRrxeJHoQm5Vhj/rbGAo5xBYUlDowxQhhkiMro6DtVZvSvsUPCXntWPc3ndFsU1P9zhQEC9M9cU7qy0nk6T4E9XxtSdXQrbsuelDSRXs1JErJCXta2VELqATZlV44RelzRiT8oZ0j/AAlabsgAAAB4nGNgYoAALgbsgImRiZGZgb0iMzEvPSuTgQEAFIQDBw==') format('woff'),
+  url('//at.alicdn.com/t/font_925485_sdxergjvn0o.ttf?t=1542616805541') format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-xiangji:before { content: "\e607"; }
+
+.upload-img-wrap {
+  height: rpx(160);
+  padding: 0 rpx(28);
+  margin-bottom: rpx(24);
+  @extend %flex;
+
+  .add-btn {
+    height: 100%;
+    width: 100%;
+    color: #999;
+    flex-direction: column;
+  }
+  .upload-text {
+    font-size: rpx(24);
+  }
+  .ali-icon {
+    @extend .iconfont;
+    margin-bottom: rpx(10);
+    font-size: rpx(48);
+  }
+  .upload-file {
+    width: rpx(160);
+    height: rpx(160);
+    border-radius: rpx(6);
+    margin-right: rpx(20);
+    @extend %rel;
+    .del-btn-box {
+      @extend %abs;
+      right: rpx(-30);
+      top: rpx(-30);
+      width: rpx(60);
+      height: rpx(60);
+      z-index: 2;
+    }
+    .clear-icon {
+      height: 18px;
+    }
+    .upload-img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .upload-input-box {
+    width: rpx(160);
+    height: rpx(160);
+    border: 1px dashed #999;
+    border-radius: rpx(6);
+
+    .imgtips {
+      font-size: rpx(24);
+      color: #999;
+    }
+  }
+
+  .flex-c{
+    @extend %flex-c;
+  }
+}

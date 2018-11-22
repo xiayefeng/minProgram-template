@@ -1,0 +1,6 @@
+<view class="toast-wrap" hidden="{{showToast}}">
+    <view class="t-content">
+        <slot></slot>
+        <view class="t-tip">{{tips}}</view>
+    </view>
+</view>

@@ -1,0 +1,24 @@
+
+.foot-logo{
+  height:110rpx;
+  width:100%;
+  position: absolute;
+  left:0;
+  bottom: 100rpx;
+}
+
+.tem-foot-logo-wrap {
+  width: 100%;
+  text-align: center;
+  position:absolute;
+  bottom:0;
+  left:0;
+}
+.tem-foot-logo-wrap .img {
+  width: 262rpx;
+  height: 39rpx;
+  margin: 40rpx 0 30rpx;
+}
+.no-btm-btn {
+  bottom:0;
+}

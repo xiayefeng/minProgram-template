@@ -1,0 +1,16 @@
+.tem-top-logo{
+  line-height: 80rpx;
+  background: #fafafa;
+  font-size:30rpx;
+  }
+.tem-top-logo .shop-avatar{
+  width:51rpx;
+  height:51rpx;
+  margin:0 20rpx 0 30rpx;
+  border-radius: 50%;
+}
+.tem-top-logo .right-text{
+  color:#e4393c;
+  font-size:28rpx;
+  margin-right:20rpx;
+}

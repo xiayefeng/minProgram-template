@@ -1,0 +1,20 @@
+<view class="upload-img-wrap">
+    <block class="imgbox" wx:for="{{imageList}}" wx:key="*this">
+        <view class="upload-file">
+            <image class="upload-img" src="{{item}}" mode="aspectFill" data-src="{{item}}"
+                   bindtap="previewImage"></image>
+            <view class="del-btn-box flex-c" catchtap="delImg" data-id="{{item}}">
+                <icon class="clear-icon" type="clear" size="18"></icon>
+            </view>
+        </view>
+    </block>
+    <view class="upload-input-box flex-c">
+        <view class="add-btn flex-c" bindtap="chooseImage">
+            <view class="icon">
+                <text class="icon-xiangji ali-icon"></text>
+            </view>
+            <view class="imgtips">{{options.btnTitle}}</view>
+            <view class="imgtips" wx:if="{{options.showLimit}}">(最多{{limitNum}}张)</view>
+        </view>
+    </view>
+</view>
