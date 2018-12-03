@@ -18,8 +18,8 @@ function request(url, data = {}, method = "GET") {
       },
       success: function (res) {
         if (res.statusCode == 200) {
-
-          if (res.data) {
+            resolve(res.data)
+          /* if (res.data) {
             if (res.data.code == 0 || res.data.code == 1000) {
               resolve(res.data);
             } else if (res.data.code == 1013) {
@@ -33,15 +33,18 @@ function request(url, data = {}, method = "GET") {
             }
           } else {
             throwError(res.data, reject)
-          }
+          } */
         } else {
           reject({
-            msg: '网络错误，请稍后重试',
+            message: '网络错误，请稍后重试',
             code: res.statusCode
           })
         }
       },
       fail: function (err) {
+        if(err.errMsg && ! err.message){
+          err.message = err.errMsg
+        }
         reject(err)
         console.log('request failed')
       },
@@ -55,17 +58,17 @@ function request(url, data = {}, method = "GET") {
 function throwError(res, reject) {
   if (res.msg) {
     reject({
-      msg: res.msg,
+      message: res.msg,
       code: res.code
     })
   } else if (res.data && res.data.errorMsg) {
     reject({
-      msg: res.data.errorMsg,
+      message: res.data.errorMsg,
       code: res.code
     })
   } else {
     reject({
-      msg: '服务器错误，请稍后重试',
+      message: '服务器错误，请稍后重试',
       code: res.code
     })
   }
