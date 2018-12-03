@@ -7,6 +7,7 @@
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#373a41",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom"
   }
 }

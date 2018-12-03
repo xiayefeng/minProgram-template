@@ -1,10 +1,23 @@
 /**index.wxss**/
+.tabar {  
+  width: 100%;  
+  box-sizing: border-box;  
+  position: fixed;  
+  text-align: center;  
+  font-size: 12pt;  
+  color: #fff;  
+  background-color: #6cbc72;
+}
+
+.tabar view {  
+  padding: 25rpx 0rpx;
+}
 
 .userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 100rpx 0 30rpx;
+  margin: 230rpx 0 30rpx;
 }
 
 .userinfo-avatar {
@@ -19,6 +32,6 @@
 }
 
 .usermotto {
-  margin-top: 100px;
+  margin-top: 100rpx;
   text-align: center;
 }

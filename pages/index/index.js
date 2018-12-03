@@ -7,7 +7,9 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    bar_Height: wx.getSystemInfoSync().statusBarHeight,
+    pos: 0
   },
   //事件处理函数
   bindViewTap: function() {
