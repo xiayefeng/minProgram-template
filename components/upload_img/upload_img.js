@@ -55,15 +55,15 @@ Component({
 
     chooseImage() {
       let arr = this.data.imageList
-      if (arr.length === 3) {
+      if (arr.length === this.data.limitNum) {
         util.showToast({
-          text: '最多上传3张图片！'
+          text: `最多上传${this.data.limitNum}张图片！`
         })
         return
       }
       // console.log('选择图片')
       wx.chooseImage({
-        count: 3, // 最多可以选择的图片张数，默认9
+        count: this.data.limitNum, // 最多可以选择的图片张数，默认9
         sizeType: ['original', 'compressed'], // original 原图，compressed 压缩图，默认二者都有
         sourceType: ['album', 'camera'], // album 从相册选图，camera 使用相机，默认二者都有
         success: (res) => {
@@ -73,20 +73,20 @@ Component({
           let arr3 = res.tempFiles
           if (arr.length + arr2.length > this.data.limitNum) {
             util.showToast({
-              text: '最多上传3张图片！'
+              text: `最多上传${this.data.limitNum}张图片！`
             })
           } else {
             if (this.data.isCheckBig) {
               let isBig = false
               arr3.map((item, idx) => {
-                if (item.size / 1024 > 10 * 1024) {
+                if (item.size / 1024 > this.data.limitSize * 1024) {
                   isBig = true
                   arr2.splice(idx, 1)
                 }
               })
               if (isBig) {
                 util.showToast({
-                  text: '图片大小不能超过10M！'
+                  text: `图片大小不能超过${this.data.limitSize}M！`
                 })
               }
             }

@@ -1,11 +1,18 @@
-<view class="action-sheet-wrap" wx:if="{{showAction}}" catchtap="closeMask" catchtouchmove="cancleBubble">
-    <view class="item-wrap {{showAction?'item-show':''}} {{position==='bottom'?'item-wrap-bottom':'item-wrap-top'}}">
-        <view class="top-title" wx:if="{{hasTitle}}" catchtap="stopBubble">
-            <text>{{actionTitle}}</text>
-            <view wx:if="{{hasCloseBtn}}" catchtap="closeMask" class="close-btn flex-c">
-                <text class="icon-guanbi ali-icon"></text>
-            </view>
-        </view>
-        <slot></slot>
-    </view>
+<view
+	class="action-sheet-wrap"
+	wx:if="{{showAction}}"
+	catchtap="closeMask"
+	catchtouchmove="cancleBubble"
+>
+</view>
+<view
+	class="item-wrap {{showAction?'item-show':''}} {{position==='bottom'?'item-wrap-bottom':'item-wrap-top'}}"
+>
+	<view class="top-title" wx:if="{{hasTitle}}" catchtap="stopBubble">
+		<text>{{ actionTitle }}</text>
+		<view wx:if="{{hasCloseBtn}}" catchtap="closeMask" class="close-btn flex-c">
+			<text class="icon-guanbi ali-icon"></text>
+		</view>
+	</view>
+	<slot></slot>
 </view>
