@@ -1,11 +1,11 @@
 const isDev = 1 // 1:开发环境 2:测试环境  0: 生产环境
 
 function request(url, data = {}, method = "GET") {
+  wx.showNavigationBarLoading()
   return new Promise(function (resolve, reject) {
     if (/[a-z]/g.test(method)) {
       method = method.toUpperCase()
     }
-    wx.showNavigationBarLoading()
     wx.request({
       url: url,
       data: data,
@@ -14,15 +14,6 @@ function request(url, data = {}, method = "GET") {
       success: function (res) {
         if (res.statusCode == 200) {
           resolve(res.data)
-          /*if (res.data) {
-            if (res.data.code == 0) {
-              resolve(res.data);
-            } else {
-              throwError(res.data, reject)
-            }
-          } else {
-            throwError(res, reject)
-          }*/
         } else {
           reject({
             message: '网络错误，请稍后重试',
