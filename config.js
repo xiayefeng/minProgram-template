@@ -1,7 +1,6 @@
 const isDev = 1 // 1:开发环境 2:测试环境  0: 生产环境
 
 function request(url, data = {}, method = "GET") {
-
   return new Promise(function (resolve, reject) {
     if (/[a-z]/g.test(method)) {
       method = method.toUpperCase()
