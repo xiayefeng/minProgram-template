@@ -1,0 +1,1 @@
+<text wx:if="{{fontClass}}" class="iconfont {{'icon-' + fontClass}} my-class" style="font-size:{{fontSize}}{{dw}}; color: {{color}};"></text>

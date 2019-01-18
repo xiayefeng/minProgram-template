@@ -1,11 +1,11 @@
 const isDev = 1 // 1:开发环境 2:测试环境  0: 生产环境
 
 function request(url, data = {}, method = "GET") {
-  wx.showNavigationBarLoading()
   return new Promise(function (resolve, reject) {
     if (/[a-z]/g.test(method)) {
       method = method.toUpperCase()
     }
+    wx.showNavigationBarLoading()
     wx.request({
       url: url,
       data: data,

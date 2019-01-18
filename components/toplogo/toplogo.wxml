@@ -1,6 +1,0 @@
-<template name="topLogo">
-  <view class="tem-top-logo flex-b" hover-class="hover-class" catchtap="tapTopLogo">
-    <view class="flex"><image class="shop-avatar" src="{{avatarUrl}}" mode="aspectFill"></image><text>{{title}}</text></view>
-    <view class="right-text" wx:if="{{rightText}}">{{rightText}}</view>
-  </view>
-</template>

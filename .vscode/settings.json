@@ -4,7 +4,7 @@
     "*.wxp": "vue",
     "*.wxc": "vue",
     "*.wpy": "vue",
-    "*.wxml": "html",
+    "*.wxml": "wxml",
     "*.wxss": "css"
   }
 }
