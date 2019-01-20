@@ -2,7 +2,7 @@
 
 >#### 参数 
  * fontClass {string}  图标类名，只要横杠后边部分例如 ‘icon-bofanganniu’ , 只取bofanganniu即可
- * fontSize   {string, number} 字体大小 默认值 36  默认单位 rpx
+ * fontSize   {string, number} 字体大小 默认值 32  默认单位 rpx
  * dw {string} 字体单位 默认值 'rpx'
  * color {string} 字体颜色 默认值 
 >#### 事件
