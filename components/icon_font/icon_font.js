@@ -6,7 +6,7 @@ Component({
 
     fontSize: {         // 字体大小
       type: [String, Number],
-      value: 36
+      value: 32
     },
     dw: {           // 字体大小单位
       type: String,
