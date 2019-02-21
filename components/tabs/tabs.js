@@ -41,5 +41,14 @@ Component({
                 this.triggerEvent('change-idx', idx)
             }
         }
+    },
+    pageLifetimes: {
+        show() {
+            if(this.data.activedIdx !== this.data.idx) {
+                this.setData({
+                    activedIdx: this.data.idx
+                })
+            }
+        },
     }
 })
