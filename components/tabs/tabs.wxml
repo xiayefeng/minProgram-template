@@ -1,0 +1,11 @@
+<view class="tabs tabs-wrap" wx:if="{{tabsArr.length>0}}">
+  <view class="item {{idx===activedIdx?'active':''}}"
+        style="{{idx === activedIdx?'color:'+ activeColor + ';border-bottom:' + borderWidth + ' solid '+activeColor+';':''}}"
+        wx:for="{{tabsArr}}"
+        wx:for-index="idx"
+        wx:key="*this"
+        data-idx="{{idx}}"
+        catchtap="tapItem">
+      {{item}}
+  </view>
+</view>

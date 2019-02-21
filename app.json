@@ -9,5 +9,8 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "white",
     "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "icon-font": "/components/icon_font/icon_font"
   }
 }

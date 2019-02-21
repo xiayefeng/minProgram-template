@@ -1,0 +1,23 @@
+.tabs {
+  display: flex;
+  align-items: center;
+}
+
+.tabs {
+  justify-content: center;
+}
+
+.tabs .item.hover-class {
+  background: #eee;
+}
+
+.tabs .item {
+  flex: 1;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=tabs.wxss.map */
