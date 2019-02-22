@@ -7,7 +7,7 @@ Component({
         },
         activeColor: {
             type: String,
-            value: '#e4393c'
+            value: '#00adb5'
         },
         borderWidth: {
             type: String,
